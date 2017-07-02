@@ -5,12 +5,11 @@ using UnityEngine.UI;
 public class DropMenu : MonoBehaviour {
 
     public GameObject[] buttonArr = new GameObject[4]; //создаём массив с 4 объектов (кнопок)
-    public Text[] textArr = new Text[4]; //создаём массив с 4 объектов (кнопок)
-    GameSettings gameSettings; // создаём переменную gameSettings для общения с классом
+    public Text[] textArr = new Text[4]; //создаём массив с 4 объектов (текст)
+    public string gridCur; // переменная к оторой текущая сетка
 
     void Start () {
-        gameSettings = GetComponent<GameSettings>();
-        textArr[0].text = textArr[1].text;
+        textArr[0].text = textArr[1].text; // присваиваем тексту верхней (главной) кнопке значение второй (3x3)
         for (int i = 1; i <= 3; i++)
         {
             buttonArr[i].SetActive(false); //выключаем 3 нижних кнопки
@@ -21,13 +20,13 @@ public class DropMenu : MonoBehaviour {
     {
         for (int i = 1; i <= 3; i++)
         {
-            buttonArr[i].SetActive(true); // при нажатии на верхнюю включаем
+            buttonArr[i].SetActive(true); // при нажатии на верхнюю включаем 3 нижних кнопки
         }
     }
 
     public void Grid(string grid)
     {
-        gameSettings.gridCur = grid;
+        gridCur = grid; //присваеваем gridCur выбранную решётку в насстрпойках
         switch (grid)
         {
             case "3x3":
