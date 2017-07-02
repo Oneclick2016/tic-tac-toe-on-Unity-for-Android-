@@ -19,17 +19,18 @@ public class MainScripts : MonoBehaviour {
 
     public void CreateGame()
     {
+        //выполняем проверки на размер поля
         if (gameSettings.gridCur == "3x3")
         {
-            Debug.Log("Ваше поле" + gameSettings.gridCur);
+            
         }
         if (gameSettings.gridCur == "4x4")
         {
-            Debug.Log("Ваше поле" + gameSettings.gridCur);
+            
         }
         if (gameSettings.gridCur == "5x5")
         {
-            Debug.Log("Ваше поле" + gameSettings.gridCur);
+            
         }
     }
 }
