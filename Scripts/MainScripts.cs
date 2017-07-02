@@ -9,7 +9,7 @@ public class MainScripts : MonoBehaviour {
         fonChange.Fon(0); //меняем фон на фон без поля
     }
 	
-	//void Update () {
+	void Update () {
 	
-	//}
+	}
 }

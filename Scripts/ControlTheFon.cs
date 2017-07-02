@@ -3,15 +3,21 @@ using System.Collections;
 
 public class ControlTheFon : MonoBehaviour {
 
-    public void ClickButtonMainMenu()
+    public FonChange fonChange;
+
+    void Start()
     {
-        FonChange fonChange = GetComponent<FonChange>();
+        fonChange = GetComponent<FonChange>();
+    }
+
+    public void ClickButtonMainMenu()
+    { 
+    
         fonChange.Fon(1); //включаем поле
     }
 
     public void ClickButtonGameMenu()
     {
-        FonChange fonChange = GetComponent<FonChange>();
         fonChange.Fon(0); //выключаем поле
     }
 }
